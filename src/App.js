@@ -40,9 +40,9 @@ class App extends React.Component {
       <h1>F... this Emojis Garden</h1>
 
       <div className="btn-container">
-          <button onClick={() => this.addGarden(this.SIZE_GARDEN)} id="button-garden" type="submit" >Add a garden</button>
+          <button onClick={() => this.addGarden(this.SIZE_GARDEN)} id="btn-add-garden" type="submit" >Add a garden</button>
       </div>
-      
+
       {this.state.farm.map((elem) => {
           return (
               <div className="gdn-container">

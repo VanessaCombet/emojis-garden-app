@@ -1,5 +1,5 @@
 import React from 'react'
-import "./App.css"
+import "./Garden.css"
 
 class Garden extends React.Component {
     constructor(props) {
@@ -60,7 +60,7 @@ class Garden extends React.Component {
                     {ligne}
                 </div>
                 <div className="btn-container">
-                    <button id="button-plant" type="submit" onClick={this.addPlant}>Plant an Emoji</button>
+                    <button id="btn-add-plant" type="submit" onClick={this.addPlant}>Plant an Emoji</button>
                 </div>
                 </>
             )
