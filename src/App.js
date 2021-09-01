@@ -1,5 +1,5 @@
 import React from 'react'
-import './App.css';
+import './App.css'
 import Garden from "./Garden"
 
 class App extends React.Component {
@@ -37,7 +37,12 @@ class App extends React.Component {
   render() {
     return (
       <>
-      <h1>F... this Emoji Garden</h1>
+      <h1>F... this Emojis Garden</h1>
+
+      <div className="btn-container">
+          <button onClick={() => this.addGarden(this.SIZE_GARDEN)} id="button-garden" type="submit" >Add a garden</button>
+      </div>
+      
       {this.state.farm.map((elem) => {
           return (
               <div className="gdn-container">
@@ -45,10 +50,6 @@ class App extends React.Component {
               </div>
           )
       })}
-
-      <div className="btn-container">
-          <button onClick={() => this.addGarden(this.SIZE_GARDEN)} id="button-garden" type="submit" >Add a garden</button>
-      </div>
       </>
     );
   }

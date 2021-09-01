@@ -7,9 +7,9 @@ class Garden extends React.Component {
         this.state = { garden: props.garden}
     }
 
-    componentDidUpdate() {
-        console.log("nb of emojis", this.getNbOfEmojis())
-    }
+    // componentDidUpdate() {
+    //     console.log("nb of emojis", this.getNbOfEmojis())
+    // }
 
     getNbOfEmojis = () => {
         let nbOfEmojis = this.state.garden.filter( (elem) => elem.emoji !== "")
