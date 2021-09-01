@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/emojis-garden-app/static/css/main.32929df7.chunk.css",
+    "main.js": "/emojis-garden-app/static/js/main.7eee7c10.chunk.js",
+    "main.js.map": "/emojis-garden-app/static/js/main.7eee7c10.chunk.js.map",
+    "runtime-main.js": "/emojis-garden-app/static/js/runtime-main.091a690b.js",
+    "runtime-main.js.map": "/emojis-garden-app/static/js/runtime-main.091a690b.js.map",
+    "static/js/2.bfa2c38f.chunk.js": "/emojis-garden-app/static/js/2.bfa2c38f.chunk.js",
+    "static/js/2.bfa2c38f.chunk.js.map": "/emojis-garden-app/static/js/2.bfa2c38f.chunk.js.map",
+    "static/js/3.c74e1eb2.chunk.js": "/emojis-garden-app/static/js/3.c74e1eb2.chunk.js",
+    "static/js/3.c74e1eb2.chunk.js.map": "/emojis-garden-app/static/js/3.c74e1eb2.chunk.js.map",
+    "index.html": "/emojis-garden-app/index.html",
+    "static/css/main.32929df7.chunk.css.map": "/emojis-garden-app/static/css/main.32929df7.chunk.css.map",
+    "static/js/2.bfa2c38f.chunk.js.LICENSE.txt": "/emojis-garden-app/static/js/2.bfa2c38f.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.091a690b.js",
+    "static/js/2.bfa2c38f.chunk.js",
+    "static/css/main.32929df7.chunk.css",
+    "static/js/main.7eee7c10.chunk.js"
+  ]
+}
