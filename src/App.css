@@ -1,4 +1,47 @@
-.App {
+
+h1 {
+  text-align: center;
+}
+
+.grid-container {
+  height: 100%;
+  display: grid;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+  grid-template-rows: repeat(5, 40px);
+  grid-template-columns: repeat(5, 40px);
+  /* gap: 0; */
+}
+
+.cell {
+  border: 1px solid white;
+  background-color: green;
+  display: grid;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1%;
+}
+
+button {
+  width: 10%;
+}
+
+.gdn-container {
+  display: flex-col;
+  /* justify-content: center;
+  align-items: center; */
+  padding: 1%;
+}
+
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +78,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
