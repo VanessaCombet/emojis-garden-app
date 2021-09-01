@@ -2,69 +2,76 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## General Guidelines
+### Requirements
+- Each component must have its own file and appropriate prototypes.
+- All styling must be in CSS files. No inline CSS! To structure your code well, we recommend you to have one CSS file per component.
+- There must be no errors or warnings in the JS console.
+- Your package.json file will be the one given 
 
-In the project directory, you can run:
+You can't modify this package.json. The Sentinel will use its own version of it. 
 
-### `yarn start`
+This is to ensure that 1) the Sentinel can run without internet access, 2) you don't use any other JavaScript libraries.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+You can add an external CSS library (for example, the CSS part of Bootstrap) if you add the CSS files directly to your project.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### What this project is for (minimum recommended completion)
 
-### `yarn test`
+During the React initiation we led you through small exercices meant to teach you the basic principles and syntax.
+You discovered what React was and how to write components.
+Great, now how to develop a practical understanding of how to use React?
+That's the goal of this project!
+In this project, you will:
+- Practice writing components for a specific use case
+- Figure out how to coordinate components
+- Manage state across all levels of your UI
+- Translate UI requirements into React concepts
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Minimum recommended completion
+At the end of the project, everybody should be completely comfortable with steps 1 to 3.
 
-### `yarn build`
+Steps 4 & 5 require more conceptual understanding and problem solving.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+It's okay if you can't do them on your own at first, but once your team has figured out how to apply React concepts to those steps, you should be able to explain and reproduce what has been done.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Step 1
+As we just said, we’ll start by building a basic garden. 
+Your garden will be a 5x5 grid, with a button "Plant an Emoji".
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+In this garden we will be able to add and remove basic emojis.
 
-### `yarn eject`
+When we click the “Plant an Emoji” button, a new emoji should appear in an available cell of the garden. Of course, if the garden is full, clicking the button will do nothing.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Clicking on an existing emoji will delete it from the garden.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Implementation guidelines
+You will create an App component that's rendered at the root node.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+At this step, your App component should contain a state called garden.
+garden will be an array of 25 values (because we have a 5x5 grid!) representing the cells of the garden.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Adding an emoji will therefore be equivalent to changing the garden state by changing the appropriate value in the array.
 
-## Learn More
+What those values are is up to you. Each cell can be a string, a boolean, an int… what matters is that you can have a value that encodes the absence/presence of an emoji.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Step 2
+At this step, we will make our emojis grow!
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+An emoji will be planted as a 🌱
+-> then it will automatically grow into a 🌿 
+-> then it will automatically grow into a 🌳
 
-### Code Splitting
+The growth from one emoji to another will happen after 2 seconds. 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+💡 To implement this, you can use the setTimeout function. That function allows you to execute another function after a specific amount of time has passed.
+What happens if an emoji is deleted and cannot grow anymore? Does your program still work in that case?
 
-### Analyzing the Bundle Size
+## Step 3
+The next thing we will do is to have several gardens.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+You will add a "Add Garden" button. This button will add new gardens when we click on it.
 
-### Making a Progressive Web App
+Each garden will have its own grid and its own "Plant an Emoji" button. 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Every garden must be completely independent.
+Reminder: make sure that your Gardencomponent is in its own file (with proper prototypes!).
