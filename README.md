@@ -2,6 +2,11 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+You can find this project on GitHub:
+
+- https://github.com/VanessaCombet/emojis-garden-app
+- https://vanessacombet.github.io/emojis-garden-app/
+
 ## General Guidelines
 
 ### Requirements
