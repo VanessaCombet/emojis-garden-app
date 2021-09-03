@@ -25,9 +25,7 @@ class App extends React.Component {
   };
 
   componentDidMount() {
-    //this.setState({ garden: this.generateGarden(size_garden)})
     this.addGarden(this.SIZE_GARDEN);
-    //this.setState( {} )
   }
 
   componentDidUpdate() {
